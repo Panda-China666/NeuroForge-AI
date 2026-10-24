@@ -1,0 +1,18 @@
+{
+  "title": "Profile the current model",
+  "rationale": "Measure the selected model on an available device.",
+  "assumptions": [
+    "The selected dataset matches the model."
+  ],
+  "warnings": [
+    "This runs actual computation after approval."
+  ],
+  "steps": [
+    {
+      "action": "run",
+      "node_id": "",
+      "parameter": "profile",
+      "value_json": "{\"device\": \"auto\", \"inspect_batch\": 8}"
+    }
+  ]
+}

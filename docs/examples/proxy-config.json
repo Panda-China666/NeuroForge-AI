@@ -1,0 +1,7 @@
+{
+  "seed": 42,
+  "proxy_methods": [
+    "snip",
+    "gradnorm"
+  ]
+}

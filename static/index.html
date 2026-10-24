@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark light"><title>NeuroForge AI · Architecture Studio</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath fill='%2398f0c0' d='M20 1 38 11v18L20 39 2 29V11z'/%3E%3Cpath d='M12 27V13l16 14V13' fill='none' stroke='%23101518' stroke-width='4'/%3E%3C/svg%3E"><link rel="stylesheet" href="/static/style.css"><link rel="stylesheet" href="/static/vnext.css"><link rel="stylesheet" href="/static/studio.css">
+<link rel="stylesheet" href="/static/agent.css"><script type="importmap">{"imports":{"three":"/static/vendor/three.module.js"}}</script></head>
+<body class="light">
+<div class="app">
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="NeuroForge home"><span class="brand-symbol"><svg viewBox="0 0 32 32" fill="none"><path d="M6 24V8l10 10V8h10v16L16 14v10H6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg></span><span>neuroforge<span class="brand-ai"> AI</span><small>DESIGN / EXPLORE / TRAIN</small></span></a>
+  <button class="project-switch" id="project-switch" aria-label="Switch project" title="Switch project"><span class="project-avatar">EV</span><span id="project-name">Loading project…</span><span class="muted">⌄</span></button>
+  <div class="nav-label">WORKSPACE <span>01</span></div>
+  <nav id="nav">
+    <button class="nav-item active" data-page="architecture"><i data-icon="graph"></i>Architecture Studio</button>
+    <button class="nav-item" data-page="modules"><i data-icon="layers"></i>Module Library</button>
+    <button class="nav-item" data-page="exports"><i data-icon="layout"></i>Export Studio</button>
+    <button class="nav-item" data-page="datasets"><i data-icon="database"></i>Dataset Studio</button>
+    <button class="nav-item" data-page="search"><i data-icon="orbit"></i>Search Lab<span class="pill">NAS</span></button>
+    <button class="nav-item" data-page="training"><i data-icon="activity"></i>Training Studio</button>
+    <button class="nav-item" data-page="experiments"><i data-icon="flask"></i>Experiment Lab</button>
+  </nav>
+  <div class="sidebar-note"><div class="tiny-heading"><span class="status-dot"></span> CONNECTED RUNTIME</div><p>Your next architecture,<br>starts here.</p><div class="local-hardware" id="hardware">Connecting to engine…</div></div>
+  <div class="sidebar-bottom"><button class="nav-item" data-page="settings"><i data-icon="settings"></i>Runtime & capabilities</button><button style="display:none" class="theme-toggle" id="theme" title="Toggle color theme"><i data-icon="sun"></i><span>Toggle theme</span><span class="version">VNext</span></button><div style="font-size:8px;color:#a6b5ac;padding:12px 25px">LOCAL WORKSPACE · 0.4</div></div>
+</aside>
+<main>
+  <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <strong id="page-title">Architecture Studio</strong></div><div class="topbar-right"><span id="save-state" class="save-state"><span class="status-dot"></span> Saved</span><span class="separator"></span><button class="icon-button" id="help" title="Help"><i data-icon="help"></i></button><span class="avatar">R</span></div></header>
+  <section id="page"></section>
+  <footer class="statusbar"><span><span class="status-dot"></span><span id="engine-status">PyTorch engine</span></span><span id="footer-context">Model Graph · IR v1</span><span class="status-right">Local execution <span class="muted">|</span> NeuroForge AI</span></footer>
+</main>
+</div>
+<div class="toast-stack" id="toasts" role="status" aria-live="polite"></div>
+<dialog id="modal"><div id="modal-content"></div></dialog>
+<script type="module" src="/static/app.js"></script>
+</body></html>
