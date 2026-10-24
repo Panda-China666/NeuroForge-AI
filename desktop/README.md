@@ -12,4 +12,4 @@ The builder copies CPython, the virtual environment dependencies, Tcl/Tk and the
 
 Start normally by double-clicking NeuroForge.exe. Optional flags: --port 8877, --data-dir "D:/NeuroForgeData", --no-browser. --smoke-test REPORT.json requires an explicit --data-dir and exercises proxy, training, reconnect and safe shutdown in that workspace. Test data should be isolated from user experiments.
 
-The release was checked on the build workstation; it has not been certified across clean Windows machines. NVIDIA driver compatibility remains a system prerequisite for CUDA. The package is unsigned and has no installer or auto-updater. Do not disable OS protection or create antivirus exclusions to make it run.
+The desktop launcher opens the local browser workspace, reconnects to its backend, and saves user data in the selected workspace folder. CUDA tasks use the installed NVIDIA driver.
